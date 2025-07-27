@@ -11,3 +11,16 @@ provider "azurerm" {
   features {}
   subscription_id = "b397c2d0-369a-47dd-9100-9467b7447185"
 }
+resource "azurerm_resource_group" "example" {
+  name     = "example-resources"
+  location = "West Europe"
+}
+`
+resource "azurerm_resource_group" "example" {
+  name     = "example-resources"
+  location = "West Europe"
+}
+azurerm_resource_group "example" {
+  name     = "example-resources"
+  location = "West Europe"
+}
